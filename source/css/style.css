@@ -58,6 +58,7 @@ h2 {
 .button {
   background-color: #001aeb;
   padding: 0;
+  cursor: pointer;
   border: none;
   outline: none; }
   .button:hover {
@@ -519,7 +520,10 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 22px;
   font-weight: 500;
-  color: #A0A7B7; }
+  color: #A0A7B7;
+  cursor: pointer; }
+  .orders__filter-item a:hover {
+    text-decoration: underline; }
 
 .orders__filter-item--active a {
   position: relative;
@@ -673,7 +677,10 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
   background-image: url(../images/icon-view.png);
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  cursor: pointer; }
+  .orders__show:hover {
+    background-color: #066aff; }
 
 .orders__invisible {
   position: absolute;

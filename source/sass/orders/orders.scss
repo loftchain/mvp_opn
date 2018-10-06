@@ -26,6 +26,11 @@
   line-height: 22px;
   font-weight: 500;
   color: #A0A7B7;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .orders__filter-item--active a {
@@ -200,6 +205,11 @@
   background-image: url(../images/icon-view.png);
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #066aff;
+  }
 }
 
 .orders__invisible {
