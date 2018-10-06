@@ -25,87 +25,224 @@
       </div>
     </div>
   </header>
-  <nav class="main-nav">
-    <ul class="main-nav__list">
-      <li class="main-nav__item">
-        <a href="#" class="main-nav__link main-nav__link--active">
-          <svg width="24" height="24">
-            <use xlink:href="images/sprite.svg#icon-orders"></use>
-          </svg>
-          <span>Orders</span>
-        </a>
-      </li>
-      <li class="main-nav__item">
-        <a href="#" class="main-nav__link">
-          <svg width="24" height="24">
-            <use xlink:href="images/sprite.svg#icon-neworder"></use>
-          </svg>
-          <span>New order</span>
-        </a>
-      </li>
-      <li class="main-nav__item">
-        <a href="#" class="main-nav__link">
-          <svg width="24" height="27">
-            <use xlink:href="images/sprite.svg#icon-myorders"></use>
-          </svg>
-          <span>My orders</span>
-        </a>
-      </li>
-      <li class="main-nav__item">
-        <a href="#" class="main-nav__link">
-          <svg width="24" height="24">
-            <use xlink:href="images/sprite.svg#icon-companyprofile"></use>
-          </svg>
-          <span>Company profile</span>
-        </a>
-      </li>
-      <li class="main-nav__item">
-        <a href="#" class="main-nav__link">
-          <svg width="24" height="24">
-            <use xlink:href="images/sprite.svg#icon-documents"></use>
-          </svg>
-          <span>Documents</span>
-        </a>
-      </li>
-      <li class="main-nav__item">
-        <a href="#" class="main-nav__link">
-          <svg width="24" height="24">
-            <use xlink:href="images/sprite.svg#icon-buytokens"></use>
-          </svg>
-          <span>Buy Token</span>
-        </a>
-      </li>
-      <li class="main-nav__item">
-        <a href="#" class="main-nav__link">
-          <svg width="24" height="24">
-            <use xlink:href="images/sprite.svg#icon-rating"></use>
-          </svg>
-          <span>Rating</span>
-        </a>
-      </li>
-      <li class="main-nav__item">
-        <a href="#" class="main-nav__link">
-          <svg width="24" height="24">
-            <use xlink:href="images/sprite.svg#icon-logistic"></use>
-          </svg>
-          <span>Logistics</span>
-        </a>
-      </li>
-      <li class="main-nav__item">
-        <a href="#" class="main-nav__link">
-          <svg width="24" height="24">
-            <use xlink:href="images/sprite.svg#icon-settings"></use>
-          </svg>
-          <span>Settings</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-<script>
-  var collection = document.querySelectorAll('.main-nav__link');
-
-  for (var i = 0;)
-
-</script>
+  <div class="main-wrapper">
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link main-nav__link--active">
+            <svg width="24" height="24">
+              <use xlink:href="images/sprite.svg#icon-orders"></use>
+            </svg>
+            <span>Orders</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            <svg width="24" height="24">
+              <use xlink:href="images/sprite.svg#icon-neworder"></use>
+            </svg>
+            <span>New order</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            <svg width="24" height="27">
+              <use xlink:href="images/sprite.svg#icon-myorders"></use>
+            </svg>
+            <span>My orders</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            <svg width="24" height="24">
+              <use xlink:href="images/sprite.svg#icon-companyprofile"></use>
+            </svg>
+            <span>Company profile</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            <svg width="24" height="24">
+              <use xlink:href="images/sprite.svg#icon-documents"></use>
+            </svg>
+            <span>Documents</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            <svg width="24" height="24">
+              <use xlink:href="images/sprite.svg#icon-buytokens"></use>
+            </svg>
+            <span>Buy Token</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            <svg width="24" height="24">
+              <use xlink:href="images/sprite.svg#icon-rating"></use>
+            </svg>
+            <span>Rating</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            <svg width="24" height="24">
+              <use xlink:href="images/sprite.svg#icon-logistic"></use>
+            </svg>
+            <span>Logistics</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            <svg width="24" height="24">
+              <use xlink:href="images/sprite.svg#icon-settings"></use>
+            </svg>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="main">
+      <div class="main__wrapper">
+        <section class="orders">
+          <div class="orders__wrapper">
+            <header class="orders__header">
+              <h2 class="orders__title">Orders</h2>
+              <div class="orders__nav">
+                <ul class="orders__filter-list">
+                  <li class="orders__filter-item orders__filter-item--active">
+                    <a>All orders</a>
+                  </li>
+                  <li class="orders__filter-item">
+                    <a>Orders by me</a>
+                  </li>
+                </ul>
+                <div class="orders__search">
+                  <input type="search" placeholder="Search...">
+                  <button class="button orders__search-button"></button>
+                </div>
+              </div>
+              <div class="orders__line"></div>
+            </header>
+            <div class="orders__content">
+              <ul class="orders__list">
+                <li class="orders__item">
+                  <div class="orders__item-content">
+                    <div class="orders__item-block orders__item-block--company">
+                      <h4 class="orders__item-subtitle">COMPANY</h4>
+                      <div class="orders__item-company">
+                        <img src="images/icon-regeneron.png" alt="regeneron">
+                        <p>Renergon
+                          Pharma</p>
+                      </div>
+                    </div>
+                    <div class="orders__item-block orders__item-block--order">
+                      <h4 class="orders__item-subtitle">ORDER</h4>
+                      <p class="orders__order-text">New packaging for antibiotics
+                        and tablets</p>
+                    </div>
+                    <div class="orders__item-block orders__item-block--type">
+                      <h4 class="orders__item-subtitle">ORDER TYPE</h4>
+                      <p class="orders__order-type">Looking for performer</p>
+                    </div>
+                    <div class="orders__item-block orders__item-block--expire">
+                      <h4 class="orders__item-subtitle">ORDER EXPIRE</h4>
+                      <p class="orders__order-expire">30 Mar 2019</p>
+                    </div>
+                    <div class="orders__item-block orders__item-block--price">
+                      <h4 class="orders__item-subtitle">ORDER PRICE</h4>
+                      <p class="orders__order-price">
+                        $1000
+                      </p>
+                    </div>
+                  </div>
+                  <div class="orders__item-footer">
+                    <p class="orders__number">#2891094</p>
+                    <button class="orders__button button">Respond</button>
+                    <button class="orders__show"></button>
+                    <p class="orders__invisible"><span>289</span> Respondents</p>
+                  </div>
+                </li>
+                <li class="orders__item">
+                  <div class="orders__item-content">
+                    <div class="orders__item-block orders__item-block--company">
+                      <h4 class="orders__item-subtitle">COMPANY</h4>
+                      <div class="orders__item-company">
+                        <img src="images/icon-korea.png" alt="regeneron">
+                        <p>Korea Electric Power</p>
+                      </div>
+                    </div>
+                    <div class="orders__item-block orders__item-block--order">
+                      <h4 class="orders__item-subtitle">ORDER</h4>
+                      <p class="orders__order-text">
+                        Sale of new ship containers and cargo packages
+                      </p>
+                    </div>
+                    <div class="orders__item-block orders__item-block--type">
+                      <h4 class="orders__item-subtitle">ORDER TYPE</h4>
+                      <p class="orders__order-type">to sell</p>
+                    </div>
+                    <div class="orders__item-block orders__item-block--expire">
+                      <h4 class="orders__item-subtitle">ORDER EXPIRE</h4>
+                      <p class="orders__order-expire">12 Jul 2019</p>
+                    </div>
+                    <div class="orders__item-block orders__item-block--price">
+                      <h4 class="orders__item-subtitle">ORDER PRICE</h4>
+                      <p class="orders__order-price">
+                        $25,990
+                      </p>
+                    </div>
+                  </div>
+                  <div class="orders__item-footer">
+                    <p class="orders__number">#2891094</p>
+                    <button class="orders__button button">Respond</button>
+                    <button class="orders__show"></button>
+                    <p class="orders__invisible"><span>289</span> Respondents</p>
+                  </div>
+                </li>
+                <li class="orders__item">
+                  <div class="orders__item-content">
+                    <div class="orders__item-block orders__item-block--company">
+                      <h4 class="orders__item-subtitle">COMPANY</h4>
+                      <div class="orders__item-company">
+                        <img src="images/icon-range.png" alt="regeneron">
+                        <p>Range Resources</p>
+                      </div>
+                    </div>
+                    <div class="orders__item-block orders__item-block--order">
+                      <h4 class="orders__item-subtitle">ORDER</h4>
+                      <p class="orders__order-text">
+                        Buy crafting wooden boxes for forestry. Preferably oak bark
+                      </p>
+                    </div>
+                    <div class="orders__item-block orders__item-block--type">
+                      <h4 class="orders__item-subtitle">ORDER TYPE</h4>
+                      <p class="orders__order-type">to buy</p>
+                    </div>
+                    <div class="orders__item-block orders__item-block--expire">
+                      <h4 class="orders__item-subtitle">ORDER EXPIRE</h4>
+                      <p class="orders__order-expire">18 Jul 2019</p>
+                    </div>
+                    <div class="orders__item-block orders__item-block--price">
+                      <h4 class="orders__item-subtitle">ORDER PRICE</h4>
+                      <p class="orders__order-price">
+                        $340,000
+                      </p>
+                    </div>
+                  </div>
+                  <div class="orders__item-footer">
+                    <p class="orders__number">#2891094</p>
+                    <button class="orders__button button">Respond</button>
+                    <button class="orders__show"></button>
+                    <p class="orders__invisible"><span>289</span> Respondents</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
 </body>
 </html>

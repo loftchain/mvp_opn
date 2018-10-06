@@ -27,6 +27,27 @@ img {
   box-sizing: border-box;
 }
 
+h2 {
+  font-size: 34px;
+  line-height: 41px;
+  font-weight: 600;
+}
+
+.button {
+  background-color: #001aeb;
+  padding: 0;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: #0014B2;
+  }
+
+  &:active {
+    background-color: #001093;
+  }
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
