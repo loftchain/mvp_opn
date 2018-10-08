@@ -306,5 +306,13 @@
     </footer>
   </main>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $('.main-nav__link').click(function() {
+    $('.main-nav__link--active').removeClass('main-nav__link--active');
+    $(this).addClass('main-nav__link--active');
+  });
+</script>
 </body>
 </html>
