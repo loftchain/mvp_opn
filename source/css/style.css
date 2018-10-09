@@ -503,6 +503,8 @@ input[type="radio"].visually-hidden {
   color: #5E9EFF; }
 
 .main {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   padding: 46px;
   padding-bottom: 0;
@@ -700,6 +702,116 @@ input[type="radio"].visually-hidden {
   background-color: #1E85FF;
   border-radius: 4px;
   box-shadow: 0 0 4px #E2E2E2; }
+
+.order__back-button {
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  margin-bottom: 24px;
+  padding-left: 24px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #19233D; }
+  .order__back-button span {
+    position: absolute;
+    left: 0; }
+
+.order__title {
+  margin: 0;
+  margin-bottom: 32px; }
+
+.order__item {
+  background-color: #ffffff;
+  border-radius: 5px; }
+
+.order__item-header {
+  padding: 32px 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #DEE2ED; }
+
+.order__item-company {
+  display: flex;
+  align-items: center; }
+  .order__item-company img {
+    margin-right: 16px; }
+  .order__item-company p {
+    margin: 0;
+    font-size: 26px;
+    line-height: 35px;
+    font-weight: 500; }
+
+.order__price-text {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #066AFF; }
+
+.order__item-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 40px 24px; }
+
+.order__item-block--order {
+  width: 20%; }
+
+.order__item-block--type {
+  width: 20%; }
+
+.order__item-block--expire {
+  width: 10%; }
+
+.order__item-block--category {
+  width: 14%; }
+
+.order__item-block--location {
+  width: 16%; }
+
+.order__order-type {
+  margin: 0;
+  font-weight: 500;
+  color: #066AFF;
+  text-transform: uppercase;
+  text-decoration: underline; }
+
+.order__order-text {
+  margin: 0; }
+
+.order__item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 24px 40px 32px; }
+
+.order__number {
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+  color: #B2B2B2;
+  letter-spacing: 0.02em; }
+
+.order__buttons-group {
+  display: flex; }
+
+.order__button {
+  width: 180px;
+  margin-right: 16px;
+  padding: 13px;
+  line-height: 19px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 5px; }
+
+.order__show-button {
+  width: 45px;
+  height: 45px;
+  background-color: #1E85FF;
+  border: none;
+  border-radius: 5px; }
+  .order__show-button:hover {
+    background-color: #066aff; }
 
 .company__header-container {
   margin-bottom: 32px;
@@ -909,6 +1021,7 @@ input[type="radio"].visually-hidden {
   border-radius: 5px; }
 
 .footer {
+  margin-top: auto;
   padding-top: 100px;
   padding-bottom: 24px; }
 
