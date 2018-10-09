@@ -1,0 +1,139 @@
+.company__header-container {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company__title {
+  margin: 0;
+}
+
+.company__button {
+  width: 140px;
+  padding: 13px;
+  background-color: transparent;
+  border: 1px solid #001AEB;
+  border-radius: 5px;
+
+  &:hover,
+  &:active{
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.company__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 48px;
+}
+
+.company__descr-list {
+  width: 57%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.company__descr-item {
+  padding: 24px 40px;
+  border-bottom: 1px solid #DEE2ED;
+  border-radius: 5px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+  &--name {
+    padding-top: 32px;
+  }
+}
+
+.company__info {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 16px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+}
+
+.company__item-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #19233D;
+
+  a {
+    color: #066AFF;
+    text-decoration: underline;
+  }
+}
+.company__item-wallet {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.company__wallet-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      fill: #0014B2;
+    }
+  }
+
+  svg {
+    fill: #066AFF;
+  }
+}
+
+.company__invisible {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: -15px;
+  padding: 8px 27px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: #066AFF;
+  box-shadow: 0 0 4px #E2E2E2;
+  border-radius: 5px;
+
+  &--active {
+    display: block;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    background-color: #066AFF;
+    transform: rotate(45deg);
+  }
+}
+
+.company__rating {
+  width: 40%;
+}
+
