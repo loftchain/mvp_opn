@@ -163,20 +163,22 @@
             </ul>
             <div class="company__rating">
               <ul class="company__rating-list">
-                <li class="company__rating-item">
+                <li class="company__rating-item company__rating-item--head">
                   <h4 class="company__item-subtitle">COMPANY RATING</h4>
                   <div class="company__rating-descr">
-                    <p class="company__item-text">Speed: <span>5</span> of 5</p>
-                    <p class="company__item-text">Quality: <span>4</span> of 5</p>
+                    <p class="company__item-text company__item-text--first">Speed: <span>5</span> of 5</p>
+                    <p class="company__item-text company__item-text--second">Quality: <span>4</span> of 5</p>
                   </div>
                 </li>
                 <li class="company__rating-item">
                   <h4 class="company__item-subtitle">COMPANY REVIEWS</h4>
                   <div class="company__review">
-                    <img src="images/icon-tesla.png" alt="tesla">
+                    <img src="images/icon-tesla.png" width="32" height="32" alt="tesla">
                     <div class="company__review-group">
-                      <h4 class="company__review-subtitle">Tesla Motors</h4>
-                      <p class="company__review-date">10 Aug 2019</p>
+                      <div class="company__review-container">
+                        <h4 class="company__review-subtitle">Tesla Motors</h4>
+                        <p class="company__review-date">10 Aug 2019</p>
+                      </div>
                       <p class="company__reviews-text">
                         Excellent performance and fast implementation time. The new Tesla models couldn't have come out
                         so fast if it wasn't for this company.
@@ -186,10 +188,12 @@
                 </li>
                 <li class="company__rating-item">
                   <div class="company__review">
-                    <img src="images/icon-ferrari.png" alt="">
+                    <img src="images/icon-ferrari.png" width="32" height="32" alt="ferrari">
                     <div class="company__review-group">
-                      <h4 class="company__review-subtitle">Ferrari N.V.</h4>
-                      <p class="company__review-date">10 Aug 2019</p>
+                      <div class="company__review-container">
+                        <h4 class="company__review-subtitle">Ferrari N.V.</h4>
+                        <p class="company__review-date">10 Aug 2019</p>
+                      </div>
                       <p class="company__reviews-text">
                         We did not expect such timely and responsible execution from this company. Bravo!
                       </p>
@@ -198,18 +202,20 @@
                 </li>
                 <li class="company__rating-item">
                   <div class="company__review">
-                    <img src="images/icon-swn.png" alt="">
+                    <img src="images/icon-swn.png" width="32" height="32" alt="swn">
                     <div class="company__review-group">
-                      <h4 class="company__review-subtitle">Southwestern Energy</h4>
-                      <p class="company__review-date">10 Aug 2019</p>
+                      <div class="company__review-container">
+                        <h4 class="company__review-subtitle">Southwestern Energy</h4>
+                        <p class="company__review-date">10 Aug 2019</p>
+                      </div>
                       <p class="company__reviews-text">Gorgeous, our rating is 5 and only 5</p>
                     </div>
                   </div>
                 </li>
               </ul>
               <form class="company__review-form" action="#">
-                <input type="text" class="company__review-input">
-                <button class="company__review-button">
+                <input type="text" class="company__review-input" placeholder="Write your review...">
+                <button class="button company__review-button">
                   <img src="images/icon-arrow-top.png" alt="">
                 </button>
               </form>

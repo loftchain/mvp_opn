@@ -59,6 +59,11 @@ h4 {
   }
 }
 
+input,
+button {
+  font-family: 'Montserrat', 'Times New Roman', serif;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {

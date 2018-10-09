@@ -75,6 +75,10 @@ h4 {
   .button:active {
     background-color: #001093; }
 
+input,
+button {
+  font-family: 'Montserrat', 'Times New Roman', serif; }
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -455,7 +459,8 @@ input[type="radio"].visually-hidden {
   margin-right: 15px; }
 
 .main-nav {
-  width: 120px; }
+  width: 120px;
+  flex-shrink: 0; }
 
 .main-nav__list {
   display: flex;
@@ -735,7 +740,8 @@ input[type="radio"].visually-hidden {
   .company__descr-item:last-child {
     border-bottom: none; }
   .company__descr-item--name {
-    padding-top: 32px; }
+    padding-top: 32px;
+    padding-bottom: 32px; }
 
 .company__info {
   display: flex;
@@ -802,6 +808,105 @@ input[type="radio"].visually-hidden {
 
 .company__rating {
   width: 40%; }
+
+.company__rating-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 5px 5px 0 0; }
+
+.company__rating-item {
+  padding: 24px 40px;
+  border-bottom: 1px solid #DEE2ED; }
+  .company__rating-item:last-child {
+    border-bottom: none; }
+  .company__rating-item--head {
+    padding-top: 32px; }
+
+.company__rating-descr {
+  display: flex; }
+
+.company__rating-descr .company__item-text {
+  position: relative;
+  padding-left: 20px; }
+  .company__rating-descr .company__item-text--first {
+    margin-right: 24px; }
+    .company__rating-descr .company__item-text--first::before {
+      background-image: url(../images/icon-speed.png); }
+  .company__rating-descr .company__item-text--second::before {
+    background-image: url(../images/icon-quality.png); }
+  .company__rating-descr .company__item-text::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.company__review {
+  display: flex;
+  align-items: flex-start; }
+  .company__review img {
+    margin-right: 8px; }
+
+.company__review-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px; }
+
+.company__review-subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  color: #19233D; }
+
+.company__review-date {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: #B2B2B2; }
+
+.company__reviews-text {
+  margin: 0;
+  color: #19233D; }
+
+.company__review-form {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 40px;
+  background-color: #EDF3FD;
+  border-radius: 0 0 5px 5px; }
+
+.company__review-input {
+  width: 316px;
+  padding: 11px 16px;
+  color: #B3B3B3;
+  border: none;
+  border-radius: 5px; }
+
+.company__review-input::-webkit-input-placeholder {
+  color: #B3B3B3; }
+
+.company__review-input::-moz-placeholder {
+  color: #B3B3B3; }
+
+/*Firefox 19+*/
+.company__review-input:-moz-placeholder {
+  color: #B3B3B3; }
+
+/*Firefox 18-*/
+.company__review-input:-ms-input-placeholder {
+  color: #B3B3B3; }
+
+.company__review-button {
+  width: 41px;
+  height: 41px;
+  border-radius: 5px; }
 
 .footer {
   padding-top: 100px;
