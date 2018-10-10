@@ -262,6 +262,25 @@
   padding: 24px 40px 32px;
 }
 
+.company__documents-gray {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 42px;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+
+  img {
+    margin-bottom: 32px;
+  }
+
+  p {
+    margin: 0;
+    color: #C7C7C7;
+    text-align: center;
+  }
+}
+
 .company__documents-upload {
   display: flex;
   flex-direction: column;
@@ -269,6 +288,10 @@
   padding: 24px 0;
   background-color: #EFF3FF;
   border-bottom: 1px solid #D1E3FF;
+
+  &--fill {
+    padding: 52px 0;
+  }
 }
 
 .company__upload-button {
