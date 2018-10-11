@@ -44,8 +44,9 @@ h4 {
 }
 
 .button {
-  background-color: #001aeb;
   padding: 0;
+  color: #ffffff;
+  background-color: #001aeb;
   cursor: pointer;
   border: none;
   outline: none;
@@ -56,6 +57,18 @@ h4 {
 
   &:active {
     background-color: #001093;
+  }
+
+  &--border {
+    background-color: transparent;
+    border: 1px solid #001AEB;
+    color: #001AEB !important;
+
+    &:hover,
+    &:active{
+      background-color: transparent;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
   }
 }
 
