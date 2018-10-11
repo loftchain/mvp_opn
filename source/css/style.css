@@ -601,6 +601,9 @@ input[type="radio"].visually-hidden {
   height: 1px;
   background-color: #DEE2ED; }
 
+.orders__content {
+  padding-top: 48px; }
+
 .orders__list {
   margin: 0;
   padding: 0;
@@ -614,10 +617,17 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
   margin-bottom: 30px; }
 
-.orders__item-content {
+.orders__item-header {
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px; }
+
+.orders__item-content {
+  display: flex;
+  padding-bottom: 30px; }
+
+.orders__item-content .orders__item-block {
+  margin-right: 24px; }
 
 .orders__item-block--company {
   width: 15%; }
@@ -633,6 +643,18 @@ input[type="radio"].visually-hidden {
 
 .orders__item-block--price {
   width: 11%; }
+
+.orders__item-block--material {
+  width: 12%; }
+
+.orders__item-block--mcategory {
+  width: 15%; }
+
+.orders__item-block--package {
+  width: 20%; }
+
+.orders__item-block--pcatgory {
+  width: 20%; }
 
 .orders__item-company {
   display: flex; }

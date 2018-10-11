@@ -81,6 +81,10 @@
   background-color: #DEE2ED;
 }
 
+.orders__content {
+  padding-top: 48px;
+}
+
 .orders__list {
   margin: 0;
   padding: 0;
@@ -96,10 +100,19 @@
   margin-bottom: 30px;
 }
 
-.orders__item-content {
+.orders__item-header {
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
+}
+
+.orders__item-content {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.orders__item-content .orders__item-block {
+  margin-right: 24px;
 }
 
 .orders__item-block {
@@ -122,6 +135,22 @@
 
   &--price {
     width: 11%;
+  }
+
+  &--material {
+    width: 12%;
+  }
+
+  &--mcategory {
+    width: 15%;
+  }
+
+  &--package {
+    width: 20%;
+  }
+
+  &--pcatgory {
+    width: 20%;
   }
 }
 
