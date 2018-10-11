@@ -753,7 +753,8 @@ input[type="radio"].visually-hidden {
 
 .order__item {
   background-color: #ffffff;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-bottom: 30px; }
 
 .order__item-header {
   padding: 32px 40px;
@@ -782,7 +783,14 @@ input[type="radio"].visually-hidden {
 .order__item-content {
   display: flex;
   justify-content: space-between;
-  padding: 32px 40px 24px; }
+  padding: 32px 40px 32px; }
+
+.order__item-content2 {
+  display: flex;
+  padding: 0 40px 24px; }
+
+.order__item-content2 .order__item-block {
+  margin-right: 24px; }
 
 .order__item-block--order {
   width: 20%; }
@@ -798,6 +806,18 @@ input[type="radio"].visually-hidden {
 
 .order__item-block--location {
   width: 16%; }
+
+.order__item-block--material {
+  width: 12%; }
+
+.order__item-block--mcategory {
+  width: 15%; }
+
+.order__item-block--package {
+  width: 20%; }
+
+.order__item-block--pcatgory {
+  width: 20%; }
 
 .order__order-type {
   margin: 0;
