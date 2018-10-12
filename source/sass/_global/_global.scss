@@ -70,7 +70,25 @@ h4 {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
   }
+
+  &--back {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    margin-bottom: 24px;
+    padding-left: 24px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #19233D;
+
+    span {
+      position: absolute;
+      left: 0;
+    }
+  }
 }
+
 
 input,
 button {
