@@ -39,7 +39,7 @@
         </a>
       </li>
       <li class="main-nav__item">
-        <a href="new-order.html" class="main-nav__link">
+        <a class="main-nav__link main-nav__link--active">
           <svg width="24" height="24">
             <use xlink:href="images/sprite.svg#icon-neworder"></use>
           </svg>
@@ -95,7 +95,7 @@
         </a>
       </li>
       <li class="main-nav__item">
-        <a class="main-nav__link main-nav__link--active">
+        <a href="password.html" class="main-nav__link">
           <svg width="24" height="24">
             <use xlink:href="images/sprite.svg#icon-settings"></use>
           </svg>
@@ -106,31 +106,99 @@
   </nav>
   <main class="main">
     <div class="main__wrapper">
-      <section class="password">
-        <div class="password__wrapper">
-          <header class="password__header">
-            <h2 class="password__title">Change password</h2>
-            <div class="password__line"></div>
+      <section class="new-order">
+        <div class="new-order__wrapper">
+          <header class="new-order__header">
+            <h2 class="new-order__title">New order</h2>
+            <div class="new-order__button-group">
+              <button class="button new-order__button">Product</button>
+              <button class="button--border new-order__button">Service</button>
+            </div>
+            <div class="new-order__line"></div>
           </header>
-          <div class="password__content">
-            <form class="password__form" action="#">
-              <h4 class="password__subtitle">CHANGE PASSWORD</h4>
-              <ul class="password__list">
-                <li class="password__item">
-                  <label class="password__item-title" for="old-password">Old password</label>
-                  <input type="password" class="password__input" id="old-password" placeholder="Write old password...">
+
+          <div class="new-order__content">
+            <form class="new-order__form" action="#">
+              <h4 class="new-order__form-subtitle">STEP 1</h4>
+              <ul class="new-order__input-list">
+                <li class="new-order__input-item new-order__input-item--header">
+                  <label for="new-order-header" class="new-order__label">Header</label>
+                  <input class="new-order__input" name="header" id="new-order-header" placeholder="Write your header...">
                 </li>
-                <li class="password__item">
-                  <label class="password__item-title" for="new-password-1">New password</label>
-                  <input type="password" class="password__input" id="new-password-1" placeholder="Write new password">
-                </li>
-                <li class="password__item">
-                  <label class="password__item-title" for="new-password-2">Confirm new password</label>
-                  <input type="password" class="password__input" id="new-password-2" placeholder="Repeat new password...">
+                <li class="new-order__input-item new-order__input-item--for">
+                  <label for="new-order-for" class="new-order__label">Order for</label>
+                  <select class="new-order__select" name="new-order-for" id="new-order-for">
+                      <option value="1">buy</option>
+                      <option value="2">sell</option>
+                      <option value="3">looking for performer</option>
+                    </select>
                 </li>
               </ul>
+              <h4 class="new-order__form-subtitle">STEP 2</h4>
+              <ul class="new-order__input-list">
+                <li class="new-order__input-item new-order__input-item--product">
+                  <label for="new-order-product" class="new-order__label">Product name</label>
+                  <textarea class="new-order__textarea" name="product" id="new-order-product" placeholder="Write product name..."></textarea>
+                </li>
+                <li class="new-order__input-item new-order__input-item--description">
+                  <label for="new-order-description" class="new-order__label">Description</label>
+                  <textarea class="new-order__textarea" name="description" id="new-order-description" placeholder="Write your description......"></textarea>
+                </li>
+              </ul>
+              <h4 class="new-order__form-subtitle">STEP 3</h4>
+              <ul class="new-order__input-list">
+                <li class="new-order__input-item new-order__input-item--material">
+                  <label for="new-order-material" class="new-order__label">Choose material</label>
+                  <select class="new-order__select" name="new-order-material" id="new-order-material">
+                    <option value="1">plastic</option>
+                    <option value="2">paper</option>
+                    <option value="3">carton</option>
+                    <option value="3">carton</option>
+                    <option value="3">carton</option>
+                    <option value="3">carton</option>
+                  </select>
+                  <button class=" button--border new-order__material-button" type="button">Choose material category</button>
+                </li>
+                <li class="new-order__input-item new-order__input-item--packaging">
+                  <label for="new-order-packaging" class="new-order__label">Order for</label>
+                  <select class="new-order__select" name="new-order-packaging" id="new-order-packaging">
+                    <option value="1">primary packaging</option>
+                    <option value="2">SELL</option>
+                    <option value="3">LOOKING FOR PERFORMER</option>
+                  </select>
+                  <button class=" button--border new-order__material-packaging" type="button">Choose packaging category</button>
+                </li>
+              </ul>
+              <h4 class="new-order__form-subtitle">STEP 4</h4>
+              <ul class="new-order__input-list">
+                <li class="new-order__input-item new-order__input-item--end">
+                  <label for="new-order-end" class="new-order__label new-order__label--end">Tender end</label>
+                  <input class="new-order__input new-order__input--end" id="new-order-end" type="date">
+                </li>
+                <li class="new-order__input-item new-order__input-item--location">
+                  <label for="new-order-location" class="new-order__label new-order__label--location">Location</label>
+                  <input class="new-order__input new-order__input--location" id="new-order-location" type="text" placeholder="Set location...">
+                </li>
+                <li class="new-order__input-item new-order__input-item--price">
+                  <div class="new-order__label-group">
+                    <label for="new-order-price" class="new-order__label new-order__label--price">$, Price</label>
+                    <span class="new-order__price-tooltype"></span>
+                  </div>
+                  <div class="new-order__price-group">
+                    <div>
+                      <input class="new-order__input new-order__input--price" id="item-price" type="number" placeholder="Write your offer...">
+                    </div>
+                    <output class="new-order__output" name="output-price">
+                      <span>00.00</span>
+                      <span>OPK</span>
+                    </output>
+                  </div>
+                </li>
+              </ul>
+              <button class="button new-order__publish-button">Publish</button>
             </form>
           </div>
+
         </div>
       </section>
     </div>
