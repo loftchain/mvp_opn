@@ -1559,12 +1559,49 @@ input[type="radio"].visually-hidden {
   border-radius: 5px; }
 
 .token__iframe-convert {
-  max-width: 1110px;
+  width: 100%;
+  height: 450px;
   margin: 0 auto;
   margin-top: 32px; }
-  .token__iframe-convert iframe {
-    width: 100%;
-    height: 100%; }
+
+.token__table {
+  padding: 0 32px;
+  background-color: #ffffff; }
+
+.token__table-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #DEE2ED; }
+
+.token__table-item {
+  padding: 21px 0 18px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #19233D; }
+  .token__table-item--head {
+    padding: 32px 0;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 600; }
+  .token__table-item--date {
+    width: 20%; }
+  .token__table-item--currency {
+    width: 25%; }
+  .token__table-item--info {
+    width: 25%; }
+  .token__table-item--status {
+    width: 14%; }
+
+.token__table-item p {
+  margin: 0; }
+
+.token__table-item a {
+  color: #066AFF;
+  text-decoration: underline; }
 
 .password__title {
   margin: 0;
