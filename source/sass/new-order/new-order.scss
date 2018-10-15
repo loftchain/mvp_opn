@@ -185,8 +185,15 @@ select::-ms-expand {
   display: none;
 }
 
-.new-order__material-packaging,
+.new-order__packaging-button,
 .new-order__material-button {
   padding: 11px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-order__input-item--end div,
+.new-order__input-item--location div {
+  display: flex;
+  flex-direction: column;
 }
