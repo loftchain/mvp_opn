@@ -163,6 +163,7 @@
   margin-right: 16px;
   padding: 13px 5px;
   border-radius: 5px;
+  text-align: center
 }
 
 .rating__subscribe-button {
@@ -174,6 +175,7 @@
 //comment//
 
 .rating__comment {
+  z-index: 10;
   display: none;
   position: absolute;
   top: 215px;

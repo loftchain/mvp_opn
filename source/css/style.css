@@ -1913,7 +1913,8 @@ select::-ms-expand {
   width: 140px;
   margin-right: 16px;
   padding: 13px 5px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  text-align: center; }
 
 .rating__subscribe-button {
   width: 140px;
@@ -1921,6 +1922,7 @@ select::-ms-expand {
   border-radius: 5px; }
 
 .rating__comment {
+  z-index: 10;
   display: none;
   position: absolute;
   top: 215px;
