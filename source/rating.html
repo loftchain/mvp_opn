@@ -160,7 +160,7 @@
                     </div>
                   </button>
                 </footer>
-                <div class="rating__comment rating__comment--active">
+                <div class="rating__comment">
                   <ul class="rating__comment-list">
                     <li class="rating__comment-item">
                       <div class="rating__review">
@@ -223,7 +223,7 @@
                     </div>
                   </button>
                 </footer>
-                <div class="rating__comment rating__comment--active">
+                <div class="rating__comment ">
                   <ul class="rating__comment-list">
                     <li class="rating__comment-item">
                       <div class="rating__review">
@@ -331,6 +331,14 @@
     $('.main-nav__link--active').removeClass('main-nav__link--active');
     $(this).addClass('main-nav__link--active');
   });
+</script>
+<script>
+  var commentButton = $('.rating__comment-button');
+
+  commentButton.click(function() {
+    $(this).parent().parent().find('.rating__comment').toggleClass('rating__comment--active');
+  });
+
 </script>
 </body>
 </html>
