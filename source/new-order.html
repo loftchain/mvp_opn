@@ -111,14 +111,14 @@
           <header class="new-order__header">
             <h2 class="new-order__title">New order</h2>
             <div class="new-order__button-group">
-              <button class="button new-order__button">Product</button>
-              <button class="button--border new-order__button">Service</button>
+              <a href="#tab1" class="new-order__button tabs__button tabs__button--active">Product</a>
+              <a href="#tab2" class="new-order__button tabs__button">Service</a>
             </div>
             <div class="new-order__line"></div>
           </header>
 
           <div class="new-order__content">
-            <form class="new-order__form" action="#">
+            <form id="tab1" class="new-order__form tabs__content" action="#">
               <h4 class="new-order__form-subtitle">STEP 1</h4>
               <ul class="new-order__input-list">
                 <li class="new-order__input-item new-order__input-item--header">
@@ -201,6 +201,7 @@
               </ul>
               <button class="button new-order__publish-button">Publish</button>
             </form>
+            <p class="tabs__content" id="tab2">hello</p>
           </div>
 
         </div>
@@ -300,7 +301,7 @@
     <button class="button modal__button">Confirm</button>
   </form>
 </div>
-<div class="modal modal--packaging modal--active">
+<div class="modal modal--packaging">
   <h3 class="modal__title">Packaging category</h3>
   <form class="modal__form" action="#">
     <ul class="modal__list">
@@ -408,12 +409,29 @@
     <button class="button modal__button">Confirm</button>
   </form>
 </div>
-<div class="modal__overlay modal__overlay--active"></div>
+<div class="modal__overlay"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   $('.main-nav__link').click(function () {
     $('.main-nav__link--active').removeClass('main-nav__link--active');
     $(this).addClass('main-nav__link--active');
+  });
+</script>
+<script src="js/modal.js"></script>
+<script>
+  $('document').ready(function() {
+    $('.tabs__content').hide();
+    $('.tabs__content:first').show();
+    $('.tabs__button:first').addClass('tabs__button--active');
+
+    $('.tabs__button').click(function(evt) {
+      $('.tabs__button').removeClass('tabs__button--active');
+      $(this).addClass('tabs__button--active');
+      $('.tabs__content').hide();
+
+      var selectTab = $(this).attr('href');
+      $(selectTab).fadeIn();
+    });
   });
 </script>
 </body>

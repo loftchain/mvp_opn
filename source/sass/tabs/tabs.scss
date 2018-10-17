@@ -10,6 +10,36 @@
   margin-right: 32px;
 }
 
+.tabs__button {
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #001AEB;
+  color: #001AEB;
+  cursor: pointer;
+
+  &:hover,
+  &:active{
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.tabs__button--active {
+  padding: 0;
+  color: #ffffff;
+  background-color: #001aeb;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: #0014B2;
+  }
+
+  &:active {
+    background-color: #001093;
+  }
+}
+
 .tabs__item a {
   font-size: 18px;
   line-height: 22px;
