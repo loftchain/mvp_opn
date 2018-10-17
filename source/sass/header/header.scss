@@ -36,24 +36,24 @@
 }
 
 .header__balanse__text {
-  position: relative;
+  //position: relative;
   margin: 0;
   padding-left: 32px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 0;
-    width: 16px;
-    height: 14px;
-    background-image: url(../images/icon-balanse.png);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  //&::before {
+  //  content: "";
+  //  position: absolute;
+  //  top: 5px;
+  //  left: 0;
+  //  width: 16px;
+  //  height: 14px;
+  //  background-image: url(../images/icon-balanse.png);
+  //  background-repeat: no-repeat;
+  //  background-position: center;
+  //}
 }
 
 .header__notification {
@@ -76,6 +76,10 @@
     background-color: #ffffff;
     border: 2px solid #065BFF;
     border-radius: 50%;
+  }
+
+  img {
+    cursor: pointer;
   }
 }
 

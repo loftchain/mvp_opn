@@ -58,6 +58,7 @@
 .modal__checkbox + label {
   position: relative;
   padding-left: 24px;
+  cursor: pointer;
 }
 
 .modal__checkbox + label::before {

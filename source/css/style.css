@@ -544,22 +544,11 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.02em; }
 
 .header__balanse__text {
-  position: relative;
   margin: 0;
   padding-left: 32px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 500; }
-  .header__balanse__text::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 0;
-    width: 16px;
-    height: 14px;
-    background-image: url(../images/icon-balanse.png);
-    background-repeat: no-repeat;
-    background-position: center; }
 
 .header__notification {
   position: relative;
@@ -580,6 +569,8 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
     border: 2px solid #065BFF;
     border-radius: 50%; }
+  .header__notification img {
+    cursor: pointer; }
 
 .header__company {
   min-width: 185px;
@@ -1220,7 +1211,8 @@ select::-ms-expand {
   width: 12px;
   height: 12px;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  cursor: pointer; }
   .new-order__tag-close::before, .new-order__tag-close::after {
     content: "";
     position: absolute;
@@ -2257,7 +2249,8 @@ select::-ms-expand {
 
 .modal__checkbox + label {
   position: relative;
-  padding-left: 24px; }
+  padding-left: 24px;
+  cursor: pointer; }
 
 .modal__checkbox + label::before {
   content: "";

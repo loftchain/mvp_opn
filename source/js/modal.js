@@ -10,7 +10,6 @@ $(document).ready(function() {
   var modalOverlay = $('.modal__overlay');
   var modalMaterialButton= $('.modal__button--material');
   var modalPackagingButton= $('.modal__button--packaging');
-  var materialCheckbox = materialModal.find('input');
 
   materialButton.click(function(evt) {
     materialModal.addClass('modal--active');
@@ -30,38 +29,42 @@ $(document).ready(function() {
   // Modal-end //
 
   // Tags-start //
+  function addTags(parentModifier, checkboxClass, nodeBefore) {
 
-  modalMaterialButton.click(function() {
-    var block = $('<div />');
-    var content = $('<p />');
-    var close = $('<button />');
-    content.text('hello');
-    content.addClass('new-order__tag-text');
-    close.addClass('new-order__tag-close');
-    block.addClass('new-order__tag');
-    block.append(content);
-    block.append(close);
+    //тут нужно сделать удаление всех уже выбранных блоков(чтобы предотвратить дублирование если чел ещё раз выберет)
+    $('.new-order__input-item--' + parentModifier).find('.new-order__tag').remove();  // Есть проблема
 
-    block.insertBefore(materialButton);
-    $('.modal').removeClass('modal--active');
-    modalOverlay.removeClass('modal__overlay--active');
+    $('.' + checkboxClass + ':checked').each(function() {
+      var text = $( this ).siblings('label').text();
+
+      var block =
+        '<div class="new-order__tag">' +
+        '  <p class="new-order__tag-text">' + text + '</p>' +
+        '  <button class="new-order__tag-close" type="button"></button>' +
+        '</div>';
+
+
+      nodeBefore.before(block);
+    });
+
+    $('.new-order__tag-close').on('click', function() {
+      $(this).parent().remove();
+    });
+
+    closeAllModals();
+  }
+
+  modalMaterialButton.click(function () {
+    addTags('material', 'modal__checkbox--material', materialButton);
   });
 
-  modalPackagingButton.click(function() {
-    var block = $('<div />');
-    var content = $('<p />');
-    var close = $('<button />');
-    content.text('hello');
-    content.addClass('new-order__tag-text');
-    close.addClass('new-order__tag-close');
-    block.addClass('new-order__tag');
-    block.append(content);
-    block.append(close);
-
-    block.insertBefore(packagingButton);
-    $('.modal').removeClass('modal--active');
-    modalOverlay.removeClass('modal__overlay--active');
+  modalPackagingButton.click(function () {
+    addTags('packaging', 'modal__checkbox--packging', packagingButton);
   });
 
-  // Tags-end //
 });
+
+function closeAllModals() {
+  $('.modal').removeClass('modal--active');
+  $('.modal__overlay').removeClass('modal__overlay--active');
+}

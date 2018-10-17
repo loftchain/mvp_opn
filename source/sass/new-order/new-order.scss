@@ -258,6 +258,7 @@ select::-ms-expand {
   height: 12px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   &::before,
   &::after {
