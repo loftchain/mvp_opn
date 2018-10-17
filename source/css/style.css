@@ -1850,13 +1850,13 @@ select::-ms-expand {
   padding-bottom: 30px; }
 
 .rating__item-block--company {
-  width: 65%; }
+  width: 60%; }
 
 .rating__item-block--speed {
-  width: 14%; }
+  width: 18%; }
 
 .rating__item-block--quality {
-  width: 14%; }
+  width: 18%; }
 
 .rating__item-company {
   display: flex;
@@ -1923,7 +1923,7 @@ select::-ms-expand {
 .rating__comment {
   display: none;
   position: absolute;
-  top: 225px;
+  top: 215px;
   left: 32px;
   width: 460px;
   background-color: #ffffff;

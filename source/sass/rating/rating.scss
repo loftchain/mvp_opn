@@ -78,15 +78,15 @@
 
 .rating__item-block {
   &--company {
-    width: 65%;
+    width: 60%;
   }
 
   &--speed {
-    width: 14%;
+    width: 18%;
   }
 
   &--quality {
-    width: 14%;
+    width: 18%;
   }
 }
 
@@ -176,7 +176,7 @@
 .rating__comment {
   display: none;
   position: absolute;
-  top: 225px;
+  top: 215px;
   left: 32px;
   width: 460px;
   background-color: #ffffff;
