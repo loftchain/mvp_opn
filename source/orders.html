@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+
 <header class="header">
   <div class="header__wrapper">
     <div class="header__logo">
@@ -116,11 +117,11 @@
             <h2 class="orders__title">Orders</h2>
             <div class="orders__nav">
               <ul class="orders__filter-list">
-                <li class="orders__filter-item orders__filter-item--active">
-                  <a>All orders</a>
+                <li class="orders__filter-item tabs__item">
+                  <a href="#tab1">All orders</a>
                 </li>
-                <li class="orders__filter-item">
-                  <a>Orders by me</a>
+                <li class="orders__filter-item tabs__item">
+                  <a href="#tab2">Orders by me</a>
                 </li>
               </ul>
               <form class="orders__search-form" action="#" method="get">
@@ -131,7 +132,7 @@
             <div class="orders__line"></div>
           </header>
           <div class="orders__content">
-            <ul class="orders__list">
+            <ul id="tab1" class="orders__list tabs__content">
               <li class="orders__item">
                 <div class="orders__item-header">
                   <div class="orders__item-block orders__item-block--company">
@@ -191,7 +192,7 @@
                 </div>
                 <div class="orders__item-footer">
                   <p class="orders__number">#2891094</p>
-                  <button class="orders__button button">Respond</button>
+                  <a href="item.html" class="orders__button button">Respond</a>
                   <button class="orders__show"></button>
                   <p class="orders__invisible"><span>289</span> Respondents</p>
                 </div>
@@ -255,7 +256,7 @@
                 </div>
                 <div class="orders__item-footer">
                   <p class="orders__number">#2891094</p>
-                  <button class="orders__button button">Respond</button>
+                  <a class="orders__button orders__button--temporary button">Respond</a>
                   <button class="orders__show"></button>
                   <p class="orders__invisible"><span>289</span> Respondents</p>
                 </div>
@@ -319,7 +320,73 @@
                 </div>
                 <div class="orders__item-footer">
                   <p class="orders__number">#2891094</p>
-                  <button class="orders__button button">Respond</button>
+                  <a href="item.html" class="orders__button button">Respond</a>
+                  <button class="orders__show"></button>
+                  <p class="orders__invisible"><span>289</span> Respondents</p>
+                </div>
+              </li>
+            </ul>
+            <ul id="tab2" class="orders__list tabs__content">
+              <li class="orders__item">
+                <div class="orders__item-header">
+                  <div class="orders__item-block orders__item-block--company">
+                    <h4 class="orders__item-subtitle">COMPANY</h4>
+                    <div class="orders__item-company">
+                      <img src="images/icon-regeneron.png" alt="regeneron">
+                      <p>Renergon
+                        Pharma</p>
+                    </div>
+                  </div>
+                  <div class="orders__item-block orders__item-block--order">
+                    <h4 class="orders__item-subtitle">ORDER</h4>
+                    <p class="orders__order-text">New packaging for antibiotics
+                      and tablets</p>
+                  </div>
+                  <div class="orders__item-block orders__item-block--type">
+                    <h4 class="orders__item-subtitle">ORDER TYPE</h4>
+                    <p class="orders__order-type">Looking for performer</p>
+                  </div>
+                  <div class="orders__item-block orders__item-block--expire">
+                    <h4 class="orders__item-subtitle">ORDER EXPIRE</h4>
+                    <p class="orders__order-expire">30 Mar 2019</p>
+                  </div>
+                  <div class="orders__item-block orders__item-block--price">
+                    <h4 class="orders__item-subtitle">ORDER PRICE</h4>
+                    <p class="orders__order-price">
+                    <div class="orders__order-price orders__order-price--dollar">USD 1000</div>
+                    <div class="orders__order-price orders__order-price--opk">OPK 1000</div>
+                    </p>
+                  </div>
+                </div>
+                <div class="orders__item-content">
+                  <div class="orders__item-block orders__item-block--material">
+                    <h4 class="orders__item-subtitle">MATERIAL</h4>
+                    <p class="orders__order-text">
+                      Plastic
+                    </p>
+                  </div>
+                  <div class="orders__item-block orders__item-block--mcategory">
+                    <h4 class="orders__item-subtitle">MATERIAL CATEGORY</h4>
+                    <p class="orders__order-text">
+                      HDPE,PEHD
+                    </p>
+                  </div>
+                  <div class="orders__item-block orders__item-block--package">
+                    <h4 class="orders__item-subtitle">PACKAGE</h4>
+                    <p class="orders__order-text">
+                      Primary packaging
+                    </p>
+                  </div>
+                  <div class="orders__item-block orders__item-block--pcategory">
+                    <h4 class="orders__item-subtitle">PACKAGING CATEGORY</h4>
+                    <p class="orders__order-text">
+                      Food, Drink Service Components
+                    </p>
+                  </div>
+                </div>
+                <div class="orders__item-footer">
+                  <p class="orders__number">#2891094</p>
+                  <a class="orders__button orders__button--temporary button">Respond</a>
                   <button class="orders__show"></button>
                   <p class="orders__invisible"><span>289</span> Respondents</p>
                 </div>
@@ -391,6 +458,16 @@
     </footer>
   </main>
 </div>
+<div class="modal modal--orders">
+  <img class="modal__orders-icon" src="images/icon-modal-orders.png" alt="Fill the information about your company">
+  <p class="modal__text">
+    In order to respond to the
+    order, fill in the information
+    about your company.
+  </p>
+  <button class="button modal__button modal__button--orders">Company profile</button>
+</div>
+<div class="modal__overlay"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
@@ -399,5 +476,23 @@
     $(this).addClass('main-nav__link--active');
   });
 </script>
+<!--Tabs-->
+<script>
+  $('document').ready(function() {
+    $('.tabs__content').hide();
+    $('.tabs__content:first').show();
+    $('.tabs__item:first').addClass('tabs__item--active');
+
+    $('.tabs__item').click(function(evt) {
+      $('.tabs__item').removeClass('tabs__item--active');
+      $(this).addClass('tabs__item--active');
+      $('.tabs__content').hide();
+
+      var selectTab = $(this).find('a').attr('href');
+      $(selectTab).fadeIn();
+    });
+  });
+</script>
+<script src="js/modal.js"></script>
 </body>
 </html>

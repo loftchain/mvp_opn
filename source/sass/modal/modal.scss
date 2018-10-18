@@ -18,6 +18,11 @@
     width: 580px;
   }
 
+  &--orders {
+    width: 280px;
+    text-align: center;
+  }
+
   &--active {
     display: block;
   }
@@ -53,6 +58,10 @@
   padding: 13px;
   font-weight: 700;
   border-radius: 5px;
+
+  &--orders {
+    margin: 0 auto;
+  }
 }
 
 .modal__checkbox + label {
@@ -102,4 +111,16 @@
   &--active {
     display: block;
   }
+}
+
+.modal__orders-icon {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.modal__text {
+  margin: 0;
+  margin-bottom: 32px;
+  text-align: left;
 }

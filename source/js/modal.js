@@ -7,9 +7,12 @@ $(document).ready(function() {
   var packagingButton = $('.new-order__packaging-button');
   var materialModal = $('.modal--material');
   var packagingModal = $('.modal--packaging');
+  var ordersModal = $('.modal--orders');
   var modalOverlay = $('.modal__overlay');
   var modalMaterialButton= $('.modal__button--material');
   var modalPackagingButton= $('.modal__button--packaging');
+
+  var ordersButtonTemporary = $('.orders__button--temporary');
 
   materialButton.click(function(evt) {
     materialModal.addClass('modal--active');
@@ -18,6 +21,11 @@ $(document).ready(function() {
 
   packagingButton.click(function(evt) {
     packagingModal.addClass('modal--active');
+    modalOverlay.addClass('modal__overlay--active');
+  });
+
+  ordersButtonTemporary.click(function() {
+    ordersModal.addClass('modal--active');
     modalOverlay.addClass('modal__overlay--active');
   });
 

@@ -21,31 +21,8 @@
   margin-right: 32px;
 }
 
-.orders__filter-item a {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 500;
-  color: #A0A7B7;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.orders__filter-item--active a {
-  position: relative;
-  color: #19233D;
-}
-
-.orders__filter-item--active a::after {
-  content: "";
-  position: absolute;
-  left: 0;
+.tabs__item--active.orders__filter-item a::after {
   bottom: -45px;
-  width: 100%;
-  height: 2px;
-  background-color: #066AFF;
 }
 
 .orders__search-form {
@@ -206,6 +183,7 @@
 }
 
 .orders__button {
+  text-align: center;
   width: 180px;
   margin-right: 16px;
   padding: 13px;
