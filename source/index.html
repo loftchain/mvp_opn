@@ -6,63 +6,124 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,500,800,900|Montserrat:400,500,800"
+        rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <section class="temporary">
-    <ul class="temporary__list">
-      <li class="temporary__item">
-        <a href="company.html">company</a>
-      </li>
-      <li class="temporary__item">
-        <a href="company-edit.html">company-edit</a>
-      </li>
-      <li class="temporary__item">
-        <a href="company-empty.html">company-empty</a>
-      </li>
-      <li class="temporary__item">
-        <a href="company-fll.html">company-fll</a>
-      </li>
-      <li class="temporary__item">
-        <a href="company-orders.html">company-orders</a>
-      </li>
-      <li class="temporary__item">
-        <a href="item.html">item</a>
-      </li>
-      <li class="temporary__item">
-        <a href="logistics.html">logistics</a>
-      </li>
-      <li class="temporary__item">
-        <a href="new-order.html">new-order</a>
-      </li>
-      <li class="temporary__item">
-        <a href="order.html">order</a>
-      </li>
-      <li class="temporary__item">
-        <a href="orders.html">orders</a>
-      </li>
-      <li class="temporary__item">
-        <a href="password.html">password</a>
-      </li>
-      <li class="temporary__item">
-        <a href="rating.html">rating</a>
-      </li>
-      <li class="temporary__item">
-        <a href="rating-orders-list.html">rating-orders-list</a>
-      </li>
-      <li class="temporary__item">
-        <a href="sign-in.html">sign-in</a>
-      </li>
-      <li class="temporary__item">
-        <a href="sign-success.html">sign-success</a>
-      </li>
-      <li class="temporary__item">
-        <a href="sign-up.html">sign-up</a>
-      </li>
-      <li class="temporary__item">
-        <a href="token.html">token</a>
-      </li>
-    </ul>
+<div class="sign-wrapper sign-wrapper--up">
+  <section class="sign">
+    <header class="sign__header">
+      <div class="sign__header-wrapper">
+        <a class="sign__logo" href="#">
+          <img src="images/logo.png" alt="Open Packaging Network">
+        </a>
+        <p class="sign__header-text">
+          Open Packaging<br>
+          Network
+        </p>
+      </div>
+    </header>
+    <div class="sign__content">
+      <h1 class="sign__title">
+        White-list
+      </h1>
+      <form class="sign__form" action="#" method="post">
+        <div class="sign__input-group sign__input-group--email">
+          <input class="sign__input" id="email-in" type="text" placeholder="Enter email">
+          <label for="email-in" class="sign__label sign__label--email">Email</label>
+        </div>
+        <button class="sign__button">Participate</button>
+      </form>
+      <div class="temp-block sign-sl__block">
+        <p class="sign-sl__text">
+          Participate in out white-list program and become one of the first beta-testers.
+        </p>
+        <a href="https://opnplatform.io/" target="_blank" class="sign-sl__link">Learn more</a>
+      </div>
+    </div>
   </section>
+  <section class="sign-sl">
+    <!-- Swiper -->
+
+    <section class="temporary">
+      <ul class="temporary__list">
+        <li class="temporary__item">
+          <a href="company.html">company</a>
+        </li>
+        <li class="temporary__item">
+          <a href="company-edit.html">company-edit</a>
+        </li>
+        <li class="temporary__item">
+          <a href="company-empty.html">company-empty</a>
+        </li>
+        <li class="temporary__item">
+          <a href="company-fll.html">company-fll</a>
+        </li>
+        <li class="temporary__item">
+          <a href="company-orders.html">company-orders</a>
+        </li>
+        <li class="temporary__item">
+          <a href="item.html">item</a>
+        </li>
+        <li class="temporary__item">
+          <a href="logistics.html">logistics</a>
+        </li>
+        <li class="temporary__item">
+          <a href="new-order.html">new-order</a>
+        </li>
+        <li class="temporary__item">
+          <a href="order.html">order</a>
+        </li>
+        <li class="temporary__item">
+          <a href="orders.html">orders</a>
+        </li>
+        <li class="temporary__item">
+          <a href="password.html">password</a>
+        </li>
+        <li class="temporary__item">
+          <a href="rating.html">rating</a>
+        </li>
+        <li class="temporary__item">
+          <a href="rating-orders-list.html">rating-orders-list</a>
+        </li>
+        <li class="temporary__item">
+          <a href="sign-in.html">sign-in</a>
+        </li>
+        <li class="temporary__item">
+          <a href="sign-success.html">sign-success</a>
+        </li>
+        <li class="temporary__item">
+          <a href="sign-up.html">sign-up</a>
+        </li>
+        <li class="temporary__item">
+          <a href="token.html">token</a>
+        </li>
+      </ul>
+    </section>
+  </section>
+
+</div>
+<script src="js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
+    speed: 700,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
 </body>
 </html>
