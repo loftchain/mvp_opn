@@ -17,7 +17,12 @@ function get_ip()
 }
 
 function connect_db() {
-  $mysqli = new mysqli("localhost", "opn.mvp.com", "FqJCN0sqxS", "mvp_white_list");
+  $mysqli = new mysqli(
+    "localhost",
+    "opn.mvp.com",
+    "FqJCN0sqxS",
+    "mvp_white_list"
+  );
 
   $mysqli->set_charset("utf8");
 

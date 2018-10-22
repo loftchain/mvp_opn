@@ -10,6 +10,7 @@
         rel="stylesheet">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" type="image/png" href="https://opnplatform.io/favicon.ico?v=1">
 </head>
 <body>
 <div class="sign-wrapper sign-wrapper--up">
@@ -106,23 +107,22 @@
 
 </div>
 <script src="js/swiper.min.js"></script>
-<!-- Initialize Swiper -->
 <script>
-  var swiper = new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
-    },
-    speed: 700,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+
+  $(document).ready(function () {
+
+    $("form").submit(function () {
+      $.ajax({
+        type: "POST",
+        url: "white-list.php",
+        data: $(this).serialize(),
+      }).done(function (data) {
+        console.log(data)
+        alert('You have been added to the Whitelist.');
+      });
+      return false;
+    });
+
   });
 </script>
 </body>
