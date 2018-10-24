@@ -28,19 +28,20 @@
     </header>
     <div class="sign__content">
       <h1 class="sign__title">
-        White-list
+        Meet the World's #1
       </h1>
-      <form class="sign__form" action="#" method="post">
+      <h3>All-in-One Blockchain Platform for Packaging Industry.</h3>
+      <form class="sign__form" action="#" method="post" id="whitelist_kost">
         <div class="sign__input-group sign__input-group--email">
-          <input class="sign__input" id="email-in" type="text" placeholder="Enter email">
+          <input class="sign__input" id="email-in" name="email" type="email" placeholder="Enter email">
           <label for="email-in" class="sign__label sign__label--email">Email</label>
         </div>
         <button class="sign__button">Participate</button>
       </form>
       <div class="temp-block sign-sl__block">
-        <p class="sign-sl__text">
-          Participate in out white-list program and become one of the first beta-testers.
-        </p>
+        <p class="sign-sl__text">EARLY BIRD ENTRY CAMPAIGN! Try now!</p>
+        <p>Receive 1000 OPK Token in Deposit to spend in OPN Platform till 15.11.2018</p>
+        <p>Referring OPN Platform to your Partners and receive more 500 OPK! </p>
         <a href="https://opnplatform.io/" target="_blank" class="sign-sl__link">Learn more</a>
       </div>
     </div>
@@ -106,6 +107,7 @@
   </section>
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script>
 
@@ -117,7 +119,8 @@
         url: "white-list.php",
         data: $(this).serialize(),
       }).done(function (data) {
-        console.log(data)
+        console.log(data);
+        $('#whitelist_kost')[0].reset();
         alert('You have been added to the Whitelist.');
       });
       return false;
