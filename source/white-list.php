@@ -41,8 +41,8 @@ $ip = get_ip();
 $sql = "INSERT INTO `mvp_white_list` (`email`, `ip`) VALUES ('".$_POST['email']."','$ip')";
 
 if (!$mysqli->query($sql)) {
-    echo("error recovery bd");
-    exit;
+  echo("error recovery bd");
+  exit;
 }
 
 $mysqli->close();
@@ -51,20 +51,20 @@ send_hook($_POST['email'], $ip);
 
 function send_hook($email, $ip){
 // Создаём POST-запрос
-    $request = [
-        'content' => '**email: **' . $email. "\n" . 
-                      '**ip: **' . $ip. "\n" .
-                      '--------------------------',
-    ];
+  $request = [
+    'content' => '**email: **' . $email. "\n" .
+      '**ip: **' . $ip. "\n" .
+      '--------------------------',
+  ];
 
 // Устанавливаем соединение
-    $ch = curl_init("https://discordapp.com/api/webhooks/503568677363384330/6UpK1lOoGXvaUpemuK5Y-j6xaJXNvVKHkrDl2BoQyJcr144CAYch16mZLWd1ZT7gaOTj");
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($request));
+  $ch = curl_init("https://discordapp.com/api/webhooks/503568677363384330/6UpK1lOoGXvaUpemuK5Y-j6xaJXNvVKHkrDl2BoQyJcr144CAYch16mZLWd1ZT7gaOTj");
+  curl_setopt($ch, CURLOPT_POST, 1);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($request));
 
-    $result = curl_exec($ch);
+  $result = curl_exec($ch);
 
-    if ($result) {
-      echo $result;
-    }
+  if ($result) {
+    echo $result;
+  }
 }
